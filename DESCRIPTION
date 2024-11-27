@@ -12,7 +12,5 @@ URL: https://github.com/Keefe-Murphy/climr2
 Imports: dplyr,
   ggplot2,
   readr,
-  tibble,
-  tidyr,
-  viridis
+  tidyr
 RoxygenNote: 7.3.2

@@ -6,6 +6,7 @@
 #' (the default), \code{"quarterly"}, or \code{"monthly"}.
 #' @param fit_type The type of model required, either linear regression (\code{"lm"}) by default,
 #' \code{"loess"}, or smoothing splines (\code{"smooth.spline"}).
+#' @param ... Catches unused arguments.
 #'
 #' @return An object of class \code{"climr_fit"} which includes the model details
 #' as well as the data set and \code{fit_type} used.

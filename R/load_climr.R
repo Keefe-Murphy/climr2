@@ -49,7 +49,7 @@ load_climr <- function(type = c("GLB", "NH", "SH")) {
     dplyr::mutate(year = Year, # note: changing to lowercase for the sake of tidyness
            temp = `J-D`, # note: use of backticks to extract numbers rather than characters
            x = year) |> # note: using x here to have a generic "x" for use with modelling later
-    dplyr::select(year, temp, x) %>%
+    dplyr::select(year, temp, x) |>
     dplyr::arrange(x)
 
   ## Sort out the monthly data
@@ -60,7 +60,7 @@ load_climr <- function(type = c("GLB", "NH", "SH")) {
                  names_to = "month",
                  values_to = "temp",
                  values_drop_na = TRUE) |>
-    dplyr::mutate(month = parse_factor(month, levels=months, ordered=TRUE),
+    dplyr::mutate(month = readr::parse_factor(month, levels=months, ordered=TRUE),
            year = Year,
            x = year + as.numeric(month)/12) |>
     dplyr::select(year, month, temp, x) |>

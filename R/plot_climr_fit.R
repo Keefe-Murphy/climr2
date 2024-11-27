@@ -9,6 +9,8 @@
 #' @return Nothing, just a nice ggplot.
 #'
 #' @export
+#' @importFrom ggplot2 "ggplot" "aes" "geom_point" "theme_bw" "xlab" "ylab" "ggtitle" "geom_line" "theme" "scale_color_viridis_c"
+#' @importFrom tidyr "tibble"
 #' @author Keefe Murphy - <\email{keefe.murphy@@mu.ie}>
 #' @seealso \code{\link{fit}}, \code{\link{load_climr}}
 #' @examples
@@ -29,15 +31,15 @@ plot.climr_fit <- function(x, time_grid = pretty(x$data$x, n=100), ...) {
   ## Get some predicted values based on the time grid and fit_type
   fits <- switch(x$fit_type,
                  lm = {
-                   tibble(time_grid, pred=predict(x$model,
-                                                  newdata=tibble(x=time_grid)))
+                   tidyr::tibble(time_grid, pred=stats::predict(x$model,
+                                                  newdata=tidyr::tibble(x=time_grid)))
                  },
                  loess = {
-                   tibble(time_grid, pred=predict(x$model,
-                                                  newdata=tibble(x=time_grid))) |> stats::na.omit()
+                   tidyr::tibble(time_grid, pred=stats::predict(x$model,
+                                                  newdata=tidyr::tibble(x=time_grid))) |> stats::na.omit()
                  },
                  smooth.spline = {
-                   tibble(time_grid, pred=predict(x$model, tibble(time_grid))$y[,1L])
+                   tidyr::tibble(time_grid, pred=stats::predict(x$model, tidyr::tibble(time_grid))$y[,1L])
                  })
 
   ## Finally, create the plot
