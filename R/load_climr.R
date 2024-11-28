@@ -31,7 +31,7 @@ load_climr <- function(type = c("GLB", "NH", "SH")) {
   type <- match.arg(type)
 
   ## Get the URL of the data set
-
+## Hello Keefe, Louis Here
   url <- paste0("http://data.giss.nasa.gov/gistemp/tabledata_v3/", type, ".Ts+dSST.csv")
 
   ## Read in the data (using readr)
