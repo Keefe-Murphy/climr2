@@ -32,7 +32,10 @@ plot(mod3)
 \dontrun{
 library(ggplot2)
 p <- plot(mod3)
-p + ylab("Temperature Anomaly (Celsius)") + theme_minimal()
+p +
+  ylab("Temperature Anomaly (Celsius)") +
+  theme_minimal() +
+  labs(colour="Temperature Difference")
 }
 }
 \seealso{

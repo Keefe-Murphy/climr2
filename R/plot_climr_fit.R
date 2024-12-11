@@ -59,7 +59,7 @@ plot.climr_fit <- function(x, time_grid = pretty(x$data$x, n=100), ...) {
     ggplot2::xlab("Year") +
     ggplot2::ylab("Temperature Anomaly") +
     ggplot2::ggtitle(paste(x$fit_type, "based on", x$data_type, attr(x, "source"), "data")) +
-    ggplot2::geom_line(data = fits, ggplot2::aes(x = time_grid, y = pred, colour = pred)) +
+    ggplot2::geom_line(data = fits, ggplot2::aes(x = time_grid, y = pred, colour = pred), linewidth = 1.5) +
     ggplot2::theme(legend.position = "None") +
     ggplot2::scale_color_viridis_c()
   print(p)

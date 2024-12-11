@@ -2,11 +2,13 @@ Package: climr2
 Type: Package
 Title: Analyse and Plot the Latest Global and Hemispheric Climate Data
 Version: 0.1.1
-Authors@R: person("Keefe", "Murphy", email="keefe.murphy@mu.ie", role=c("aut", "cre"))
+Authors@R: c(person("Keefe", "Murphy", email="keefe.murphy@mu.ie", role=c("aut", "cre")),
+             person("Louis", "Thomas", email="louis142thomas@gmail.com", role=c("aut")))
 Description: Downloads the latest climate data from NASA at monthly, quarterly, and yearly intervals. Performs basic modelling of said data and creates nice plots of temperature anomalies over time.
 License: GPL (>= 3)
 Encoding: UTF-8
 LazyData: true
+Date: 2024-12-11
 Depends: R (>= 4.4.0)
 URL: https://github.com/Keefe-Murphy/climr2
 Imports: dplyr,
