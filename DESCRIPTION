@@ -17,6 +17,9 @@ Imports: dplyr,
   tidyr
 RoxygenNote: 7.3.2
 Suggests: 
+    bookdown,
     knitr,
-    rmarkdown
+    rmarkdown,
+    testthat (>= 3.0.0)
 VignetteBuilder: knitr
+Config/testthat/edition: 3

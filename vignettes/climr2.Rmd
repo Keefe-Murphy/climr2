@@ -12,8 +12,8 @@ vignette: >
   %\VignetteIndexEntry{climr2}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
-  %\VignetteDepends{ggplot2}
   %\VignetteDepends{bookdown}
+  %\VignetteDepends{ggplot2}
 ---
 
 ```{r, include = FALSE}
