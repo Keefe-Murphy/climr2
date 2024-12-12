@@ -3,3 +3,5 @@
 ^LICENSE\.md$
 testing_climr.R
 ^README\.Rmd$
+^doc$
+^Meta$
